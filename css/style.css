@@ -1,0 +1,82 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* reset img */
+img {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* UTILITIS */
+
+.p-flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+header {
+  height: 80px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-image: url(../img/wall.png);
+  font-weight: 900;
+  font-family: "Edu TAS Beginner", sans-serif;
+}
+
+main {
+  background-image: url(../img/cork.png);
+  padding-top: 30px;
+}
+p {
+  font-family: "Sometype Mono", monospace;
+  color: gray;
+}
+
+.container {
+  width: 80%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.col {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card {
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+
+.pin {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    justify-content: space-between;
+  }
+
+  .col {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .col {
+    width: 30%;
+  }
+}

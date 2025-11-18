@@ -6,6 +6,7 @@ Successivamente, tramite una chiamata API recuperare i dati necessari e utilizza
 ## DIPENDENZE:
 
 - LIBRERIA AXIOS
+- GOOGLE FONTS
 
 ## SCALETTA DI LAVORO:
 
