@@ -26,7 +26,6 @@ header {
   padding: 10px;
   font-size: 1.5rem;
   background-image: url(../img/wall.png);
-  font-weight: 900;
   font-family: "Edu TAS Beginner", sans-serif;
   position: fixed;
   z-index: 1000;
@@ -42,6 +41,10 @@ body {
 main {
   padding-top: 120px;
 }
+h3 {
+  font-family: "Sometype Mono", monospace;
+  font-size: 1.2rem;
+}
 p {
   font-family: "Sometype Mono", monospace;
   color: gray;
@@ -49,14 +52,14 @@ p {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   max-width: 1020px;
   margin: 0 auto;
 }
 
 .col {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .card {
