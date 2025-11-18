@@ -28,15 +28,24 @@ header {
   background-image: url(../img/wall.png);
   font-weight: 900;
   font-family: "Edu TAS Beginner", sans-serif;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url(../img/cork.png);
 }
 
 main {
-  background-image: url(../img/cork.png);
-  padding-top: 30px;
+  padding-top: 120px;
 }
 p {
   font-family: "Sometype Mono", monospace;
   color: gray;
+  margin-top: 5px;
 }
 
 .container {
