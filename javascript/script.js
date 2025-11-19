@@ -32,15 +32,15 @@ function processPictures(array) {
 }
 
 function creaColonna(date, title, url) {
-  const col = document.createElement("div");
-  col.classList.add("col");
-  col.innerHTML = `<div class="card">
+  const div = document.createElement("div");
+  div.classList.add("col");
+  div.innerHTML = `<div class="card">
               <img class="pin" src="./img/pin.svg" alt="" />
               <img  src="${url}" alt="${title}" />
               <p>${date}</p>
               <h3>${title.toUpperCase()}</h3>
            </div>`;
-  return col;
+  return div;
 }
 
 /* al click sul bottone chiudi */
