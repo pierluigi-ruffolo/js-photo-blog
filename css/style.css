@@ -118,7 +118,7 @@ p {
   height: 100vh;
   top: 0;
 }
-.container-img {
+.container-img-overlay {
   max-width: 500px;
 }
 button {
