@@ -1,9 +1,8 @@
-/* url api */
 const urlApi = "https://lanciweb.github.io/demo/api/pictures/";
 
 /* elementi dom necessari */
 const elementOverlay = document.querySelector(".overlay");
-const conteinerCardImg = document.querySelector(".container-card-img");
+const conteinerCardImg = document.querySelector(".container-header-main");
 const elementBtn = document.querySelector(".chiudi");
 const elementConteinerImg = document.querySelector(".container-img-overlay");
 /* CHIAMATA API */
@@ -19,11 +18,11 @@ axios
 
 /* funzione che lavora i dati ricevuti*/
 function processPictures(array) {
-  const row = document.querySelector(".row");
+  const elementRow = document.querySelector(".row");
   array.forEach((photo) => {
     const { date, title, url } = photo;
     const colonna = creaColonna(date, title, url);
-    row.append(colonna);
+    elementRow.append(colonna);
     colonna.addEventListener("click", () => {
       mostraOverlay();
       elementConteinerImg.innerHTML = `<img  src="${url}" alt="${title}"/> `;
@@ -32,15 +31,15 @@ function processPictures(array) {
 }
 
 function creaColonna(date, title, url) {
-  const div = document.createElement("div");
-  div.classList.add("col");
-  div.innerHTML = `<div class="card">
+  const col = document.createElement("div");
+  col.classList.add("col");
+  col.innerHTML = `<div class="card">
               <img class="pin" src="./img/pin.svg" alt="" />
               <img  src="${url}" alt="${title}" />
               <p>${date}</p>
               <h3>${title.toUpperCase()}</h3>
            </div>`;
-  return div;
+  return col;
 }
 
 /* al click sul bottone chiudi */
