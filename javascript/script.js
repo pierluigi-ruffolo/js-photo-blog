@@ -4,7 +4,7 @@ const urlApi = "https://lanciweb.github.io/demo/api/pictures/";
 /* elementi dom necessari */
 const elementOverlay = document.querySelector(".overlay");
 const conteinerCardImg = document.querySelector(".container-card-img");
-const ElementBtn = document.querySelector(".chiudi");
+const elementBtn = document.querySelector(".chiudi");
 const elementConteinerImg = document.querySelector(".container-img-overlay");
 /* CHIAMATA API */
 axios
@@ -44,7 +44,7 @@ function creaColonna(date, title, url) {
 }
 
 /* al click sul bottone chiudi */
-ElementBtn.addEventListener("click", nascondiOverlay);
+elementBtn.addEventListener("click", nascondiOverlay);
 /* al click su overlay chiudi */
 elementOverlay.addEventListener("click", nascondiOverlay);
 
