@@ -22,30 +22,39 @@ function processPictures(array) {
   const row = document.querySelector(".row");
   array.forEach((photo) => {
     const { date, title, url } = photo;
-    const colonna = creaColonna();
-    colonna.innerHTML = `<div class="card">
+    const colonna = creaColonna(date, title, url);
+    row.append(colonna);
+    colonna.addEventListener("click", () => {
+      mostraOverlay();
+      elementConteinerImg.innerHTML = `<img  src="${url}" alt="${title}"/> `;
+    });
+  });
+}
+
+function creaColonna(date, title, url) {
+  const col = document.createElement("div");
+  col.classList.add("col");
+  col.innerHTML = `<div class="card">
               <img class="pin" src="./img/pin.svg" alt="" />
               <img  src="${url}" alt="${title}" />
               <p>${date}</p>
               <h3>${title.toUpperCase()}</h3>
            </div>`;
-    colonna.addEventListener("click", () => {
-      elementOverlay.classList.remove("p-none");
-      conteinerCardImg.classList.add("opacity");
-      elementConteinerImg.innerHTML = `<img  src="${url}" alt="${title}" /> `;
-    });
-    row.append(colonna);
-  });
-}
-
-function creaColonna() {
-  const col = document.createElement("div");
-  col.classList.add("col");
   return col;
 }
 
 /* al click sul bottone chiudi */
-ElementBtn.addEventListener("click", () => {
+ElementBtn.addEventListener("click", nascondiOverlay);
+/* al click su overlay chiudi */
+elementOverlay.addEventListener("click", nascondiOverlay);
+
+/* funzione che mostra overlay */
+function mostraOverlay() {
+  elementOverlay.classList.remove("p-none");
+  conteinerCardImg.classList.add("opacity");
+}
+/* funzione che nasconde overlay con imamgine */
+function nascondiOverlay() {
   elementOverlay.classList.add("p-none");
   conteinerCardImg.classList.remove("opacity");
-});
+}

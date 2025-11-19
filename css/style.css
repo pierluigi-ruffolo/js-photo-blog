@@ -8,7 +8,6 @@
 img {
   max-width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 /* UTILITIS */
@@ -121,10 +120,15 @@ p {
 .container-img-overlay {
   max-width: 500px;
 }
+
+.container-img-overlay img {
+  border-radius: 10px;
+}
 button {
   width: 100px;
   padding: 10px 15px;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   .col {
